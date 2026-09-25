@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البروفايل الشخصي - المهندس محمد عبده السميعي</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --card-bg: #1a1a1a;
+            --primary-red: #e50914;
+            --text-white: #ffffff;
+            --text-muted: #b3b3b3;
+            --border-color: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+
+        /* القائمة الرئيسية / الملاحة */
+        nav {
+            background-color: #000000;
+            border-bottom: 2px solid var(--primary-red);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-red);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            color: var(--text-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-red);
+        }
+
+        /* الحاوية الرئيسية */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* الأقسام / الصفحات */
+        section {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1, h2 {
+            color: var(--primary-red);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--primary-red);
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+
+        h3 {
+            color: var(--text-white);
+            margin: 15px 0 10px 0;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+
+        /* الصفحة 1: الرئيسية */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .eng-jpg {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid var(--primary-red);
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(229, 9, 20, 0.4);
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            border-bottom: none;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-white);
+            max-width: 700px;
+            margin: 15px auto;
+        }
+
+        /* الصفحة 3: المهارات */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background-color: #262626;
+            color: var(--text-white);
+            padding: 8px 16px;
+            border-radius: 20px;
+            border-right: 3px solid var(--primary-red);
+            font-weight: bold;
+        }
+
+        /* الصفحة 4: مشاريع رقمية */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background-color: #222222;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 3px solid var(--primary-red);
+        }
+
+        .project-card h3 {
+            color: var(--primary-red);
+        }
+
+        /* الصفحة 5: التواصل معي */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            background-color: #222222;
+            padding: 15px 20px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-right: 4px solid var(--primary-red);
+        }
+
+        .contact-item span {
+            color: var(--text-white);
+            font-size: 1.1rem;
+        }
+
+        /* الفوتر */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000000;
+            color: var(--text-white);
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        /* التجاوب مع الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر ونظام التنقل بين الأقسام الـ 5 -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">م/ محمد عبده السميعي</div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">نبذة عني</a></li>
+                <li><a href="#skills">مهاراتي</a></li>
+                <li><a href="#projects">مشاريع رقمية</a></li>
+                <li><a href="#contact">التواصل معي</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- الصفحات 1: الرئيسية -->
+        <section id="home" class="hero">
+            <img src="https://via.placeholder.com/180" alt="صورة المهندس محمد عبده السميعي" class="eng-jpg">
+            <h1>المهندس/ محمد عبده السميعي</h1>
+            <p>مرحبا انا المهندس محمد عبده السميعي متخصص في تطوير المواقع وتصميم واجهات المستخدم والشباكات وقواعد البيانات واسعى دائما الى تطوير مهارتي وانشاء مشاريع تقنية احترافية</p>
+        </section>
+
+        <!-- الصفحة 2: نبذة عني -->
+        <section id="about">
+            <h2>نبذة عني</h2>
+            <p>انا متخصص في مجال تقنية معلومات لدي اهتمام بتطوير المواقع والبرمجة والشبكات وقواعد البيانات احب التعلم المستمر وتحويل الافكار الى مشاريع عملية بتصميم حديث وسهل</p>
+        </section>
+
+        <!-- الصفحة 3: مهاراتي -->
+        <section id="skills">
+            <h2>مهاراتي</h2>
+            <p>مجموعة من المهارات التقنية والتصميمية التي أتقنها:</p>
+            <div class="skills-list">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">تصميم واجهات احترافية ومبتكرة</span>
+                <span class="skill-tag">إعادة تصميم الشبكات</span>
+                <span class="skill-tag">CISCO</span>
+                <span class="skill-tag">SUBNETTING</span>
+                <span class="skill-tag">IP</span>
+            </div>
+        </section>
+
+        <!-- الصفحة 4: مشاريع رقمية -->
+        <section id="projects">
+            <h2>مشاريع رقمية</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>موقع شخصي</h3>
+                    <p>تصميم موقع بروفايل شخصي متجاوب باستخدام HTML, CSS.</p>
+                </div>
+                <div class="project-card">
+                    <h3>نظام المعلومات</h3>
+                    <p>مشروع شبكات: تصميم شبكة وإعداد المستخدِمين بقاعدة البيانات.</p>
+                </div>
+                <div class="project-card">
+                    <h3>نظام لإدارة البيانات</h3>
+                    <p>وربط واجهات مصممة واسترجاع البيانات بمرونة عالية.</p>
+                </div>
+                <div class="project-card">
+                    <h3>ربط أجهزة وإعداد شبكات</h3>
+                    <p>ربط أجهزة ما استطيع تقديمة تطوير المواقع: تصميم مواقف حديثة وتجاوبة الشبكات: اعداد وتصميم شبكات وحل مشاكلها تصميم الواجهات: تصميم واجهات جذابة وسهلة الاستخدام</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- الصفحة 5: التواصل معي -->
+        <section id="contact">
+            <h2>التواصل معي</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>البريد الإلكتروني:</strong>
+                    <span>Mohmmedalswrqi@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <strong>الهاتف:</strong>
+                    <span>716547980</span>
+                </div>
+                <div class="contact-item">
+                    <strong>الموقع:</strong>
+                    <span>اليمن</span>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>جميع الحقوق محفوظة لدي م/محمد عبده السميعي 2026م</p>
+    </footer>
+
+</body>
+</html>
